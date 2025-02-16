@@ -25,3 +25,5 @@ class WatsonxClient:
             self.project_id = settings.WATSONX_PROJECT_ID
         except Exception as e:
             raise WatsonXConfigError(f"Failed to initialize WatsonX client: {str(e)}")
+        
+watsonx_client=WatsonxClient()

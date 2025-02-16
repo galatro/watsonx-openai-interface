@@ -17,7 +17,7 @@ async def fetch_models():
 
 async def fetch_model_by_id(model_id: str):
     try:
-        model = watsonx_client.client.foundation_models.get_model_specs(id=model_id)
+        model = watsonx_client.client.foundation_models.get_model_specs(model_id=model_id)
         if model:
             return convert_watsonx_to_openai_format([model])
         raise HTTPException(status_code=404, detail=f"Model with ID {model_id} not found.")
