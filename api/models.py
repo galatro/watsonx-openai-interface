@@ -1,4 +1,4 @@
-from typing import Optional, List, Dict, Union
+from typing import Optional, List, Dict, Union, Literal
 from pydantic import BaseModel
 
 class CompletionRequest(BaseModel):
@@ -17,3 +17,4 @@ class CompletionRequest(BaseModel):
     stream: Optional[bool] = False
     seed: Optional[int] = None
     top_p: Optional[float] = 1.0
+
